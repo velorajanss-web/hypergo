@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: hypergo
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: SERPER_API_KEY
+        sync: false
